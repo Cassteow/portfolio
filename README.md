@@ -1,2 +1,2 @@
 # Just a portfolio site
-Me myself and I
+My amateur attempt to create a portfolio site.
