@@ -1,0 +1,491 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Verdana', sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #080808;
+    color: #fff;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/portfolio_image.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+.logo{
+    width: 140px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px 0;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #cf996c;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+    transition: 0.5s;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1{
+    margin-top: 20px;
+    font-size: 60px;
+}
+
+.header-text h1 span{
+    color: #cf996c;
+}
+
+/* ---------About Me------------ */
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 25px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.about-col-2 p{
+    padding: 20px 0;
+    line-height: 1.5;
+}
+
+.about-col-2 p span{
+    font-weight: 600;
+    color: #cf996c;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links:hover{
+    color:#cf996c;
+    transition: 0.3s;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #cf996c;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transition: 0.3s;
+}
+
+.tab-links.active-link::after{
+    width:50%
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.tab-contents ul li span{
+    color: #a87e5b;
+    font-size: 15px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* ---------Achievements------------ */
+#achievements{
+    padding: 30px 0;
+}
+
+.achievement-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.achievement-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.3s, color 0.3s;
+}
+
+.achievement-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.achievement-list div h2{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.achievement-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.achievement-list div:hover{
+    background: #8b694d;
+    color: #fff;
+    transform: translateY(-10px);
+}
+
+/* ---------Projects------------ */
+#projects{
+    padding: 50px 0;
+}
+
+.project-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.project{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0, 0.8), #584535);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 16px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 800;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.layer a{
+    text-decoration: none;
+    color: #fff;
+    margin-top: 20px;
+    display: inline-block;
+
+}
+
+.project:hover img{
+    transform: scale(1.1);
+}
+
+.project:hover .layer{
+    height: 100%;
+}
+
+.project-message{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+/* --------------Contact Me---------------- */
+#contact{
+    padding: 80px 0;
+    width: 100%;
+}
+
+.contact-col-2{    
+    text-align: center;
+}
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color:#fff;
+    display: inline-block;
+}
+
+.social-icons a:hover{
+    color: #cf996c;
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    padding: 14px 50px;
+    border: 1px solid #cf996c;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.btn.btn2{
+    display:inline-block;
+}
+
+.btn.btn2:hover{
+    background: #cf996c;
+    color: #fff;
+    transition: 0.3s;
+}
+
+
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: #262626;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 20px;
+    position: absolute;
+}
+
+.scrollToTopBtn {
+    background-color: #cf996c;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 48px;
+    width: 48px;
+  
+    /* place it at the bottom right corner */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* keep it at the top of everything else */
+    z-index: 100;
+    /* hide with opacity */
+    opacity: 0;
+    /* also add a translate effect */
+    transform: translateY(100px);
+    /* and a transition */
+    transition: all 0.5s ease;
+}
+  
+.showBtn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* -----------------Responsive for mobile/small screens------------------ */
+nav .fas{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/background-phone.png);
+    }
+    .header-text{
+      margin-top: 100%;
+      font-size: 16px;  
+    }
+
+    .header-text h1{
+        font-size: 30px;
+    }
+
+    .header-text h1 span{
+        color: #dfc4ae;
+    }
+
+    nav .fas{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    nav ul{
+        position: fixed;
+        top: 0;
+        right: -250px;
+        background: #8b694d;
+        height: 150vh;
+        width: 250px;
+        padding-top: 50px;
+        display: block;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        margin-right: 20px;
+        font-size: 16px;
+    }
+
+    .layer{
+        font-size: 12px;
+        height: 100%;
+    }
+
+    .layer h3{
+        font-size: 14px;
+    }
+
+    .project-message{
+        font-size: 14px;
+    }
+
+    .btn{
+        margin: 30px auto;
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+
+    
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    
+    .contact-right form input, .contact-right form textarea{
+        font-size: 14px;
+    }
+    
+    .copyright{
+        font-size: 12px;
+    }
+}

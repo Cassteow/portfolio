@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cassandrea Teow Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/20efa3dae6.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i> <!-- for mobile view -->
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i> <!-- for mobile view -->
+            </nav>
+            <div class="header-text">
+                <p>Hey there! It's me,</p>
+                <h1><span>Teow Jing Wern <br> Cassandrea.</span></h1>
+
+            </div>
+        </div>
+    </div>
+
+    <!--------------About Me---------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" alt="Cassandrea">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi! I'm Cass, a <span>computer science fresh graduate </span>
+                        equipped with excellent academic and extracurricular track records. 
+                        <br>My main focus is on the areas of <span>AI/ML and intelligent systems</span>.
+                        <br> An amateur cinephile, (trying to be) a lowkey fan of IU, and might be one of the most unserious INTJs you'll ever meet.
+                        <br> Explore this site to find out more about me!
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>ASIA PACIFIC UNIVERSITY OF TECHNOLOGY AND INNOVATION</span>
+                                <br> Bachelor of Computer Science (Intelligent Systems) with honours
+                                <br>2020 - 2023
+                                <br> CGPA: 3.95/4.00
+                                <br> Courses: Artificial Intelligence, Object-Oriented Development, Data Analysis, Data Structure, Big Data Analytics
+                            </span></li>
+                            <br>
+                            <li><span>SMK SERI SERDANG</span>
+                                <br> Malaysian Higher School Certificate (STPM)
+                                <br> 2018 - 2019
+                                <br> CGPA: 3.59/4.00
+                                <br> Courses: Physics, Mathematics, Chemistry, General Studies
+                            </span></li>
+                            <br>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>MAXIS BERHAD</span>
+                                <br> Robotic Process Automation (RPA) Intern
+                                <br> Aug 2022 – Nov 2022
+                                <br> Skills: UiPath, Python, Figma
+                                <ul>
+                                <i>
+                                    <li>Handled RPA User Change Requests and RPA bot development and enhancement use cases, completed 5
+                                        UCRs and 1 new use case in the span of 16 weeks.</li>
+                                    <li>Developed, supported, and monitored RPA bots and their scheduled runs.</li>
+                                    <li>Provided support for use cases involving ML model implementation.</li>
+                                </i>
+                                </ul>
+                                
+                            </span></li>
+                            <br>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>TECHNICAL SKILLS</span>
+                                <br> Languages: Python, Java (Proficient), C++, C#, HTML, CSS, JavaScript (Intermediate)
+                                <br> Areas: AI/ML, Computer Vision, Recommender Systems, RPA
+                                <br> Software: UiPath, Figma
+                                
+                            </span></li>
+                            <br>
+                            <li><span>RELEVENT SKILLS</span>
+                                <br> Languages: Chinese, English (Native); Malay, Cantonese (Fluent); Korean (Intermediate)
+                                <br> Certifications: UiPath RPA Developer Foundation, MUET Band 5, ABRSM Grade 5 Piano and Music Theory
+                                <br> Others: Photography, Video Editing
+                                
+                            </span></li>
+                            <br>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- ------------------Achievements---------------- -->
+        <div id="achievements">
+            <div class="container">
+                <h1 class="sub-title">My Achievements</h1>
+                <div class="achievement-list">
+                    <div>
+                        <i class="fa-solid fa-trophy"></i>
+                        <h2>Champion: UM Hackathon 2023</h2>
+                        <p>Selected as champion in the venture capital domain out of 28 participating teams for the annual nationwide
+                            UM Hackathon.
+                        </p>
+                        <!-- <a href="#">View more</a> -->
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-award"></i>
+                        <h2>8th Place Winner: Varsity Hackathon 2022</h2>
+                        <p>Selected as 8th place winner out of more than 1000 participants for our proposed solution, KekalFresh aimed to 
+                            tackle food security issues in Malaysia.
+                        </p>
+                        <!-- <a href="#">View more</a> -->
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h2>Maxis Women in Tech Scholar 2020</h2>
+                        <p>Selected as one of the 14 scholars for the year 2020 among 1200 applicants.
+                        </p>
+                        <!-- <a href="#">View more</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ------------------Projects---------------- -->
+        <div id="projects">
+            <div class="container">
+                <h1 class="sub-title">My Projects</h1>
+                <div class="project-list">
+                    <div class="project">
+                        <img src="images/watchlist.jpg" alt="watchlist">
+                        <div class="layer">
+                            <h3>WatchList: Hybrid Group Recommender System</h3>
+                            <p>A recommendation system for film and TV content, where it allows users
+                                to choose between the option of generating individual recommendations 
+                                for themselves or generating group
+                                recommendations for groups up to 3 users</p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="images/face-mask.png" alt="face-mask">
+                        <div class="layer">
+                            <h3>Face Mask Detection</h3>
+                            <p>A computer vision project that detects whether a person is wearing a face mask or not. 
+                                The system is built using convolutional neural networks (VGG16 and MobileNetV2) and OpenCV.</p>
+                            </p>
+                            <!-- <a href="#">View more</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="project-message">
+                <p>
+                    <i>And more... (hopefully, when I have the time to update this site heheh)</i>
+                </p>
+            </div>  
+        </div>     
+    </div>
+    <!-- ------------------Contact Me---------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <!-- divide into 3 columns -->
+                <div class="contact-col-1">
+                </div>
+                <div class="contact-col-2">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <div class="social-icons">
+                        <a href="mailto:cassandreateow@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/cassteow/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Cassteow"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="images/TEOW JING WERN CASSANDREA_CV.pdf" download class="btn btn2">Download CV</a> 
+                </div>
+                <div class="contact-col-3">
+                    
+                </div>
+            </div> 
+        </div>
+        
+        <button class="scrollToTopBtn"><i class="fa fa-chevron-up"></i></button>
+        <div class="copyright">
+            <p>No rights reserved. Copied from tutorials with some added ✨pazaaz✨</p>
+        </div>
+    </div>
+    
+
+<!-- Tabs for About Me -->
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+
+    }
+</script>
+<!-- Side Menu -->
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-250px";
+    }
+</script>
+
+<script>
+    var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
+    var rootElement = document.documentElement;
+
+    function handleScroll() {
+    // Do something on scroll
+    var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+    if (rootElement.scrollTop / scrollTotal > 0.8) {
+    // Show button
+    scrollToTopBtn.classList.add("showBtn");
+    } else {
+    // Hide button
+    scrollToTopBtn.classList.remove("showBtn");
+    }
+    }
+
+    function scrollToTop() {
+    // Scroll to top logic
+    rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+    });
+    }
+    scrollToTopBtn.addEventListener("click", scrollToTop);
+    document.addEventListener("scroll", handleScroll);
+    scrollToTopBtn.addEventListener("click", scrollToTop)
+</script>
+
+</body>
+</html>
